@@ -1,0 +1,23 @@
+{{ form_start(form) }}
+    <p class="text-lg font-medium">Create or edit a product</p>
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div>
+            {{ form_label(form.name) }}
+            {{ form_widget(form.name) }}
+        </div>
+    </div>
+    <div>
+        {{ form_label(form.quantity) }}
+
+        <div class="relative mt-1">
+            {{ form_widget(form.quantity) }}
+        </div>
+    </div>
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div>
+            {{ form_label(form.category) }}
+            {{ form_widget(form.category) }}
+        </div>
+    </div>
+    <button class="btn">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}
